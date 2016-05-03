@@ -3,8 +3,10 @@
 # Install basic python stuff
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 
-# Install zsh and oh-my-zsh
-sudo apt-get install zsh
+# Install misc. packages
+sudo apt-get install zsh  tmux
+
+# Install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Install vim
@@ -19,4 +21,9 @@ sudo apt-get install neovim
 # Copy .vimrc
 cp ./.vimrc ~/
 
-# TODO: Copy nvim configurations
+# Install neovim plugin-loader
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Copy neovim configuration
+cp ./init.vim ~/.config/nvim/init.vim
