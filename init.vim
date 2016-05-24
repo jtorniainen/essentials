@@ -43,6 +43,9 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" Configure nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 " Set alternative ESC key
 inoremap jk <ESC>
 
