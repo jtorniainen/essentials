@@ -17,13 +17,34 @@ Plug 'klen/python-mode'
 Plug 'lazywei/vim-matlab'
 Plug 'reedes/vim-pencil'
 Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
+Plug 'lifepillar/vim-solarized8'
+Plug 'KKPMW/moonshine-vim'
+Plug 'cohlin/vim-colorschemes'
+Plug 'gummesson/stereokai.vim'
+Plug 'fcpg/vim-fahrenheit'
+Plug 'vim-scripts/Perfect-Dark'
+Plug 'hhsnopek/vim-firewatch'
+Plug 'juanedi/predawn.vim'
+Plug 'sonjapeterson/1989.vim'
+Plug 'metakirby5/codi.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'vim-scripts/Lucius'
+Plug 'tpope/vim-markdown'
+Plug 'nelstrom/vim-markdown-folding'
 call plug#end()
 
+let base16colorspace=256
 " Set colorscheme
 set background=dark
-colorscheme gruvbox
-" Disable colorscheme background color
-hi Normal ctermbg=none
+colorscheme seoul256
+"colorscheme 1989
+"colorscheme one
+"colorscheme base16-eighties
+"colorscheme seoul256-light
+ "Disable colorscheme background color
+"hi Normal ctermbg=none
 
 " Configure airline
 let g:airline_powerline_fonts=1
@@ -49,10 +70,16 @@ map <C-n> :NERDTreeToggle<CR>
 " Set alternative ESC key
 inoremap jk <ESC>
 
+" Highlight
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+set cursorcolumn
+
 " Misc options
 let mapleader = ","
 :syn match Error "\v<[A-Z]+>"
 set completeopt-=preview
+set list
 
 " Function to calculate word count in .tex files
 function! WC()
@@ -62,3 +89,6 @@ function! WC()
     echo result . "words"
 endfunction
 command WC call WC()
+
+set tabstop=4
+set shiftwidth=4
